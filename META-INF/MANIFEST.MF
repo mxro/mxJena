@@ -17,3 +17,5 @@ Bundle-ClassPath: src/main/resources/arq-2.8.4.jar,
  src/main/resources/wstx-asl-3.2.9.jar,
  src/main/resources/xercesImpl-2.7.1.jar,
  .
+Export-Package: com.hp.hpl.jena,
+ de.mxro.jena
