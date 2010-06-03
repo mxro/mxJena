@@ -12,6 +12,17 @@
           <target>1.6</target>
         </configuration>
       </plugin>
+      
+      <plugin>
+      	<groupId>org.apache.maven.plugins</groupId>
+      	<artifactId>maven-jar-plugin</artifactId>
+      	<configuration>
+      		<archive>
+      			<manifestFile>META-INF/MANIFEST.MF</manifestFile>
+      		</archive>
+        </configuration>
+      </plugin> 
+      
     </plugins>
   </build>
   <dependencies>
@@ -28,4 +39,18 @@
   		<optional>false</optional>
   	</dependency>
   </dependencies>
+  
+  
+  <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Internal Releases</name>
+            <url>http://STF-6121-DSK06.com.auckland.ac.nz:8080/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Internal Snapshots</name>
+            <url>http://STF-6121-DSK06.com.auckland.ac.nz:8080/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
