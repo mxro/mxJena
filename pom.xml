@@ -17,7 +17,7 @@
   <dependencies>
   	<dependency>
   		<groupId>de.mxro.utils</groupId>
-  		<artifactId>mxUtils</artifactId>
+  		<artifactId>mxUtilities</artifactId>
   		<version>[0.0.1,)</version>
   		<optional>false</optional>
   	</dependency>
