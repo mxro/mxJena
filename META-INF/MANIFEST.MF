@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: mxJena
 Bundle-SymbolicName: de.mxro.jena
-Bundle-Version: 0.0.1.SNAPSHOT
+Bundle-Version: 0.0.1
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: de.mxro.filesystem
 Bundle-ClassPath: src/main/resources/arq-2.8.4.jar,
