@@ -1,8 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?><project>
+  
+  <properties>
+		<module.group>de.mxro.jena</module.group>    <!--  Maven groupId -->
+		<module.name>mxJena</module.name>             <!--  Maven artifactId -->
+		<module.version>0.0.2-SNAPSHOT</module.version> <!--  Maven artifact version -->
+		<module.importedPackages>
+		com.hp.hpl.jena.iri;resolution:=optional,
+ com.ibm.icu.lang;resolution:=optional,
+ com.ibm.icu.text;resolution:=optional,
+ com.sun.org.apache.xml.internal.serialize;resolution:=optional,
+		 de.mxro.filesystem,org.slf4j;version="1.5";resolution:=optional,*
+		</module.importedPackages>
+		<module.exportedContents>com.hp.hpl.jena</module.exportedContents>
+		<module.exportedPackages>
+ de.mxro.jena
+			
+		</module.exportedPackages>
+		<module.embeddedDependencies>*;inline=true
+		</module.embeddedDependencies>
+		<module.serviceDefinitions>
+		</module.serviceDefinitions>
+	</properties>
+  
+   <dependencies>
+  	<dependency>
+  		<groupId>de.mxro.utils</groupId>
+  		<artifactId>mxUtilities</artifactId>
+  		<version>[0.0.1,)</version>
+  		<optional>false</optional>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.hp.hpl.jena</groupId>
+  		<artifactId>jena</artifactId>
+  		<version>2.6.3</version>
+  		<optional>false</optional>
+  	</dependency>
+  </dependencies>
+  
   <modelVersion>4.0.0</modelVersion>
-  <groupId>de.mxro.jena</groupId>
-  <artifactId>mxJena</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <groupId>${module.group}</groupId>
+	<artifactId>${module.name}</artifactId>
+	<version>${module.version}</version>
+	<name>${module.name}</name>
+	<packaging>bundle</packaging>
+	
   <build>
 
   	<!-- Resources -->
@@ -45,40 +86,98 @@
     </resources>
     <!-- Resources End -->
     <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
-        </configuration>
-      </plugin>
-      
-      <plugin>
-      	<groupId>org.apache.maven.plugins</groupId>
-      	<artifactId>maven-jar-plugin</artifactId>
-      	<configuration>
-      		<archive>
-      			<manifestFile>META-INF/MANIFEST.MF</manifestFile>
-      		</archive>
-        </configuration>
-      </plugin> 
-      
-    </plugins>
-  </build>
-  <dependencies>
-  	<dependency>
-  		<groupId>de.mxro.utils</groupId>
-  		<artifactId>mxUtilities</artifactId>
-  		<version>[0.0.1,)</version>
-  		<optional>false</optional>
-  	</dependency>
-  	<dependency>
-  		<groupId>com.hp.hpl.jena</groupId>
-  		<artifactId>jena</artifactId>
-  		<version>2.6.3</version>
-  		<optional>false</optional>
-  	</dependency>
-  </dependencies>
+
+			<!--  The Maven bundle plugin generates Meta-data required for OSGi  -->
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
+						<Bundle-Version>${pom.version}</Bundle-Version>
+						<Embed-Dependency>${module.embeddedDependencies}
+						</Embed-Dependency>
+						<Embed-Directory>target/dependency</Embed-Directory>
+						<Import-Package>${module.importedPackages}</Import-Package>
+						<Export-Package>${module.exportedPackages}</Export-Package>
+						<Service-Component>${module.serviceDefinitions}</Service-Component>
+						<_exportcontents>${module.exportedContents}</_exportcontents>
+					</instructions>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+
+				<executions>
+
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!--  Cleanup necessary because of PDE tweaks -->
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${basedir}</directory>
+							<includes>
+								<include>*.jar</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+			<!--
+				Keep the MANIFEST.MF used by eclipse in sync with the MANIFEST.MF
+				created by the maven bundle plugin
+			-->
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<delete file="${basedir}/META-INF/MANIFEST.MF" />
+								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF" />
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+ 
   
   
   <distributionManagement>
