@@ -19,9 +19,9 @@
   </natures>
   <linkedResources>
     <link>
-      <name>icu4j-3.4.4.jar</name>
+      <name>iri-0.8.jar</name>
       <type>1</type>
-      <location>/Users/mx/.m2/repository/com/ibm/icu/icu4j/3.4.4/icu4j-3.4.4.jar</location>
+      <location>/Users/mx/.m2/repository/com/hp/hpl/jena/iri/0.8/iri-0.8.jar</location>
     </link>
     <link>
       <name>iri-0.8-sources.jar</name>
@@ -29,14 +29,14 @@
       <location>/Users/mx/.m2/repository/com/hp/hpl/jena/iri/0.8/iri-0.8-sources.jar</location>
     </link>
     <link>
-      <name>iri-0.8.jar</name>
-      <type>1</type>
-      <location>/Users/mx/.m2/repository/com/hp/hpl/jena/iri/0.8/iri-0.8.jar</location>
-    </link>
-    <link>
       <name>jena-2.6.3.jar</name>
       <type>1</type>
       <location>/Users/mx/.m2/repository/com/hp/hpl/jena/jena/2.6.3/jena-2.6.3.jar</location>
+    </link>
+    <link>
+      <name>icu4j-3.4.4.jar</name>
+      <type>1</type>
+      <location>/Users/mx/.m2/repository/com/ibm/icu/icu4j/3.4.4/icu4j-3.4.4.jar</location>
     </link>
     <link>
       <name>log4j-1.2.13.jar</name>

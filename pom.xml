@@ -9,7 +9,13 @@
  com.ibm.icu.lang;resolution:=optional,
  com.ibm.icu.text;resolution:=optional,
  com.sun.org.apache.xml.internal.serialize;resolution:=optional,
-		 de.mxro.filesystem,org.slf4j;version="1.5";resolution:=optional,*
+		 org.slf4j;version="1.5";resolution:=optional,
+		 com.sun.jdmk.comm;resolution:=optional,
+		 javax.jms;resolution:=optional,
+		 javax.mail.internet;resolution:=optional,
+		 sun.io;resolution:=optional,
+		 de.mxro.filesystem,
+		 *
 		</module.importedPackages>
 		<module.exportedContents>com.hp.hpl.jena</module.exportedContents>
 		<module.exportedPackages>
@@ -18,6 +24,7 @@
 		</module.exportedPackages>
 		<module.embeddedDependencies>*;inline=true
 		</module.embeddedDependencies>
+		<module.embedTransitive>true</module.embedTransitive>
 		<module.serviceDefinitions>
 		</module.serviceDefinitions>
 	</properties>
@@ -99,6 +106,7 @@
 						<Embed-Dependency>${module.embeddedDependencies}
 						</Embed-Dependency>
 						<Embed-Directory>target/dependency</Embed-Directory>
+						<Embed-Transitive>${module.embedTransitive}</Embed-Transitive>
 						<Import-Package>${module.importedPackages}</Import-Package>
 						<Export-Package>${module.exportedPackages}</Export-Package>
 						<Service-Component>${module.serviceDefinitions}</Service-Component>
