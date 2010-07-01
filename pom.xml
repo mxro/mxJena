@@ -21,6 +21,8 @@ com.sun.org.apache.xml.internal.serialize;resolution:=optional,
 com.sun.msv.verifier.regexp;resolution:=optional,
 org.slf4j;resolution:=optional,
 		 de.mxro.filesystem,
+		 com.hp.hpl.jena.ontology,
+		 com.hp.hpl.jena.rdf.model,
 		 *
 		</module.importedPackages>
 		<module.exportedContents></module.exportedContents>
