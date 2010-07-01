@@ -1,33 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><project>
-  
-  <properties>
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+	<properties>
 		<module.group>de.mxro.jena</module.group>    <!--  Maven groupId -->
 		<module.name>mxJena</module.name>             <!--  Maven artifactId -->
 		<module.version>0.0.2-SNAPSHOT</module.version> <!--  Maven artifact version -->
 		<module.importedPackages>
-		com.hp.hpl.jena.iri;resolution:=optional,
- com.ibm.icu.lang;resolution:=optional,
- com.ibm.icu.text;resolution:=optional,
- com.sun.org.apache.xml.internal.serialize;resolution:=optional,
-		 org.slf4j;version="1.5";resolution:=optional,
-		 com.sun.jdmk.comm;resolution:=optional,
-		 javax.jms;resolution:=optional,
-		 javax.mail.internet;resolution:=optional,
-		 sun.io;resolution:=optional,
-		 com.sun.msv.verifier.regexp;resolution:=optional,
-		 com.hp.hpl.jena.iri;resolution:=optional,
-com.hp.hpl.jena.util;resolution:=optional,
-com.sun.org.apache.xml.internal.serialize;resolution:=optional,
-com.sun.msv.verifier.regexp;resolution:=optional,
-org.slf4j;resolution:=optional,
-		 de.mxro.filesystem,
-		 com.hp.hpl.jena.ontology,
-		 com.hp.hpl.jena.rdf.model,
-		 *
+			com.hp.hpl.jena.iri;resolution:=optional,
+			com.ibm.icu.lang;resolution:=optional,
+			com.ibm.icu.text;resolution:=optional,
+			com.sun.org.apache.xml.internal.serialize;resolution:=optional,
+			org.slf4j;version="1.5";resolution:=optional,
+			com.sun.jdmk.comm;resolution:=optional,
+			javax.jms;resolution:=optional,
+			javax.mail.internet;resolution:=optional,
+			sun.io;resolution:=optional,
+			com.sun.msv.verifier.regexp;resolution:=optional,
+			com.hp.hpl.jena.iri;resolution:=optional,
+			com.hp.hpl.jena.util;resolution:=optional,
+			com.sun.org.apache.xml.internal.serialize;resolution:=optional,
+			com.sun.msv.verifier.regexp;resolution:=optional,
+			org.slf4j;resolution:=optional,
+			de.mxro.filesystem,
+			com.hp.hpl.jena.ontology,
+			com.hp.hpl.jena.rdf.model,
+			*
 		</module.importedPackages>
 		<module.exportedContents></module.exportedContents>
 		<module.exportedPackages>
- de.mxro.jena,com.hp.hpl.jena
+			de.mxro.jena
 			
 		</module.exportedPackages>
 		<module.embeddedDependencies>!
@@ -36,45 +37,46 @@ org.slf4j;resolution:=optional,
 		<module.serviceDefinitions>
 		</module.serviceDefinitions>
 	</properties>
-  
-   <dependencies>
-  	<dependency>
-  		<groupId>de.mxro.utils</groupId>
-  		<artifactId>mxUtilities</artifactId>
-  		<version>[0.0.1,)</version>
-  		<optional>false</optional>
-  	</dependency>
-  	<dependency>
-  		<groupId>de.mxro.thrd.jenabean</groupId>
-  		<artifactId>thrdJenaBean</artifactId>
-  		<version>[0.0.1,)</version>
-  		<optional>false</optional>
-  	</dependency>
-  	<!-- <dependency>
-  		<groupId>com.hp.hpl.jena</groupId>
-  		<artifactId>jena</artifactId>
-  		<version>2.6.3</version>
-  		<optional>false</optional>
-  	</dependency> -->
-  </dependencies>
-  
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>${module.group}</groupId>
+
+	<dependencies>
+		<dependency>
+			<groupId>de.mxro.utils</groupId>
+			<artifactId>mxUtilities</artifactId>
+			<version>[0.0.1,)</version>
+			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>de.mxro.thrd.jenabean</groupId>
+			<artifactId>thrdJenaBean</artifactId>
+			<version>[0.0.1,)</version>
+			<optional>false</optional>
+		</dependency>
+		<!--
+			<dependency> <groupId>com.hp.hpl.jena</groupId>
+			<artifactId>jena</artifactId> <version>2.6.3</version>
+			<optional>false</optional> </dependency>
+		-->
+	</dependencies>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>${module.group}</groupId>
 	<artifactId>${module.name}</artifactId>
 	<version>${module.version}</version>
 	<name>${module.name}</name>
 	<packaging>bundle</packaging>
-	
-  <build>
 
-  	<!-- Resources -->
-    <resources>
-			<!-- This entry makes sure that resources, which lie in the same package as
-			     Java classes, are copied into the target. Often external libraries
-			     require resources, which are loaded using Class.getResource or
-			     Class.getResourceAsStream and which are in a subpackage of the class.
-			     For instance, the NetBeans template for the Swing Application Framework
-			     does so.  -->
+	<build>
+
+		<!-- Resources -->
+		<resources>
+			<!--
+				This entry makes sure that resources, which lie in the same package
+				as Java classes, are copied into the target. Often external
+				libraries require resources, which are loaded using
+				Class.getResource or Class.getResourceAsStream and which are in a
+				subpackage of the class. For instance, the NetBeans template for the
+				Swing Application Framework does so.
+			-->
 			<resource>
 				<filtering>false</filtering>
 				<directory>src/main/java</directory>
@@ -83,30 +85,34 @@ org.slf4j;resolution:=optional,
 				</includes>
 				<excludes>
 					<exclude>**/*.java</exclude>
-				</excludes> 
+				</excludes>
 			</resource>
-			<!-- This entry makes sure component definitions for OSGi declarative services
-			     are copied into the destination  -->
+			<!--
+				This entry makes sure component definitions for OSGi declarative
+				services are copied into the destination
+			-->
 			<resource>
 				<targetPath>OSGI-INF</targetPath>
 				<filtering>false</filtering>
 				<directory>OSGI-INF</directory>
-			    <includes>
+				<includes>
 					<include>**</include>
 				</includes>
 			</resource>
-			<!-- I really do not know why know a manual entry for src/main/resources is 
-			     necessary? It should be included following the Maven convention. -->
-			<resource>		
+			<!--
+				I really do not know why know a manual entry for src/main/resources
+				is necessary? It should be included following the Maven convention.
+			-->
+			<resource>
 				<filtering>false</filtering>
 				<directory>src/main/resources</directory>
-			    <includes>
+				<includes>
 					<include>**</include>
 				</includes>
 			</resource>
-    </resources>
-    <!-- Resources End -->
-    <plugins>
+		</resources>
+		<!-- Resources End -->
+		<plugins>
 
 			<!--  The Maven bundle plugin generates Meta-data required for OSGi  -->
 			<plugin>
@@ -117,13 +123,16 @@ org.slf4j;resolution:=optional,
 					<instructions>
 						<Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
 						<Bundle-Version>${pom.version}</Bundle-Version>
-						<!-- <Embed-Dependency>${module.embeddedDependencies}
-						</Embed-Dependency>
-						<Embed-Directory>target/dependency</Embed-Directory>
-						<Embed-Transitive>${module.embedTransitive}</Embed-Transitive>-->
+						<!--
+							<Embed-Dependency>${module.embeddedDependencies}
+							</Embed-Dependency>
+							<Embed-Directory>target/dependency</Embed-Directory>
+							<Embed-Transitive>${module.embedTransitive}</Embed-Transitive>
+						-->
 						<Import-Package>${module.importedPackages}</Import-Package>
 						<Export-Package>${module.exportedPackages}</Export-Package>
-						<Service-Component>${module.serviceDefinitions}</Service-Component>
+						<Service-Component>${module.serviceDefinitions}
+						</Service-Component>
 						<_exportcontents>${module.exportedContents}</_exportcontents>
 					</instructions>
 				</configuration>
@@ -199,19 +208,21 @@ org.slf4j;resolution:=optional,
 		</plugins>
 	</build>
 
- 
-  
-  
-  <distributionManagement>
-        <repository>
-            <id>releases</id>
-            <name>Internal Releases</name>
-            <url>http://STF-6121-DSK06.com.auckland.ac.nz:8080/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Internal Snapshots</name>
-            <url>http://STF-6121-DSK06.com.auckland.ac.nz:8080/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+
+
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Internal Releases</name>
+			<url>http://STF-6121-DSK06.com.auckland.ac.nz:8080/nexus/content/repositories/releases
+			</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Internal Snapshots</name>
+			<url>http://STF-6121-DSK06.com.auckland.ac.nz:8080/nexus/content/repositories/snapshots
+			</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
