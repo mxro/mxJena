@@ -6,11 +6,9 @@
 		<module.name>mxJena</module.name>             <!--  Maven artifactId -->
 		<module.version>0.0.2-SNAPSHOT</module.version> <!--  Maven artifact version -->
 		<module.importedPackages>
-			com.hp.hpl.jena.iri;resolution:=optional,
 			com.ibm.icu.lang;resolution:=optional,
 			com.ibm.icu.text;resolution:=optional,
-			com.sun.org.apache.xml.internal.serialize;resolution:=optional,
-			org.slf4j;version="1.5";resolution:=optional,
+			com.sun.org.apache.xml.internal.serialize;resolution:=optional,		
 			com.sun.jdmk.comm;resolution:=optional,
 			javax.jms;resolution:=optional,
 			javax.mail.internet;resolution:=optional,
@@ -18,8 +16,6 @@
 			com.sun.msv.verifier.regexp;resolution:=optional,
 			com.hp.hpl.jena.iri;resolution:=optional,
 			com.hp.hpl.jena.util;resolution:=optional,
-			com.sun.org.apache.xml.internal.serialize;resolution:=optional,
-			com.sun.msv.verifier.regexp;resolution:=optional,
 			org.slf4j;resolution:=optional,
 			de.mxro.filesystem,
 			com.hp.hpl.jena.ontology,
