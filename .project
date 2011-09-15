@@ -29,52 +29,52 @@
 		<link>
 			<name>arq-2.8.2.jar</name>
 			<type>1</type>
-			<location>C:/Users/Max/.m2/repository/com/hp/hpl/jena/arq/2.8.2/arq-2.8.2.jar</location>
+			<location>M:/LocalMavenRepository/repository/com/hp/hpl/jena/arq/2.8.2/arq-2.8.2.jar</location>
 		</link>
 		<link>
 			<name>icu4j-3.4.4.jar</name>
 			<type>1</type>
-			<location>C:/Users/Max/.m2/repository/com/ibm/icu/icu4j/3.4.4/icu4j-3.4.4.jar</location>
+			<location>M:/LocalMavenRepository/repository/com/ibm/icu/icu4j/3.4.4/icu4j-3.4.4.jar</location>
 		</link>
 		<link>
 			<name>iri-0.8.jar</name>
 			<type>1</type>
-			<location>C:/Users/Max/.m2/repository/com/hp/hpl/jena/iri/0.8/iri-0.8.jar</location>
+			<location>M:/LocalMavenRepository/repository/com/hp/hpl/jena/iri/0.8/iri-0.8.jar</location>
 		</link>
 		<link>
 			<name>jena-2.6.2.jar</name>
 			<type>1</type>
-			<location>C:/Users/Max/.m2/repository/com/hp/hpl/jena/jena/2.6.2/jena-2.6.2.jar</location>
+			<location>M:/LocalMavenRepository/repository/com/hp/hpl/jena/jena/2.6.2/jena-2.6.2.jar</location>
 		</link>
 		<link>
 			<name>jenabean-1.0.6.jar</name>
 			<type>1</type>
-			<location>C:/Users/Max/.m2/repository/thewebsemantic/jenabean/1.0.6/jenabean-1.0.6.jar</location>
+			<location>M:/LocalMavenRepository/repository/thewebsemantic/jenabean/1.0.6/jenabean-1.0.6.jar</location>
 		</link>
 		<link>
 			<name>junit-4.5.jar</name>
 			<type>1</type>
-			<location>C:/Users/Max/.m2/repository/junit/junit/4.5/junit-4.5.jar</location>
+			<location>M:/LocalMavenRepository/repository/junit/junit/4.5/junit-4.5.jar</location>
 		</link>
 		<link>
 			<name>lucene-core-2.3.1.jar</name>
 			<type>1</type>
-			<location>C:/Users/Max/.m2/repository/org/apache/lucene/lucene-core/2.3.1/lucene-core-2.3.1.jar</location>
+			<location>M:/LocalMavenRepository/repository/org/apache/lucene/lucene-core/2.3.1/lucene-core-2.3.1.jar</location>
 		</link>
 		<link>
 			<name>stax-api-1.0.1.jar</name>
 			<type>1</type>
-			<location>C:/Users/Max/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar</location>
+			<location>M:/LocalMavenRepository/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar</location>
 		</link>
 		<link>
 			<name>wstx-asl-3.2.9.jar</name>
 			<type>1</type>
-			<location>C:/Users/Max/.m2/repository/org/codehaus/woodstox/wstx-asl/3.2.9/wstx-asl-3.2.9.jar</location>
+			<location>M:/LocalMavenRepository/repository/org/codehaus/woodstox/wstx-asl/3.2.9/wstx-asl-3.2.9.jar</location>
 		</link>
 		<link>
 			<name>xercesImpl-2.7.1.jar</name>
 			<type>1</type>
-			<location>C:/Users/Max/.m2/repository/xerces/xercesImpl/2.7.1/xercesImpl-2.7.1.jar</location>
+			<location>M:/LocalMavenRepository/repository/xerces/xercesImpl/2.7.1/xercesImpl-2.7.1.jar</location>
 		</link>
 	</linkedResources>
 </projectDescription>
