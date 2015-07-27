@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1437982900057
+Bnd-LastModified: 1437982978249
 Build-Jdk: 1.7.0_79
 Built-By: adminuser
 Bundle-ManifestVersion: 2
@@ -10,11 +10,11 @@ Created-By: Apache Maven Bundle Plugin
 Export-Package: de.mxro.jena;version="0.0.2.SNAPSHOT";uses:="com.hp.hpl.
  jena.ontology,com.hp.hpl.jena.rdf.model,de.mxro.filesystem"
 Import-Package: de.mxro.filesystem;version="[0.0,1)",com.hp.hpl.jena.ont
- ology,com.hp.hpl.jena.rdf.model,com.ibm.icu.lang;resolution:=optional,c
- om.ibm.icu.text;resolution:=optional,javax.jms;resolution:=optional,com
- .hp.hpl.jena.util;resolution:=optional,org.slf4j;resolution:=optional;v
- ersion="[1.5,2)",sun.io;resolution:=optional,com.sun.jdmk.comm;resoluti
- on:=optional,com.hp.hpl.jena.iri;resolution:=optional,com.sun.msv.verif
- ier.regexp;resolution:=optional,com.sun.org.apache.xml.internal.seriali
- ze;resolution:=optional,javax.mail.internet;resolution:=optional
+ ology,com.hp.hpl.jena.rdf.model,com.ibm.icu.text;resolution:=optional,c
+ om.sun.org.apache.xml.internal.serialize;resolution:=optional,javax.mai
+ l.internet;resolution:=optional,org.slf4j;resolution:=optional;version=
+ "[1.5,2)",com.sun.msv.verifier.regexp;resolution:=optional,javax.jms;re
+ solution:=optional,com.hp.hpl.jena.util;resolution:=optional,com.ibm.ic
+ u.lang;resolution:=optional,com.hp.hpl.jena.iri;resolution:=optional,co
+ m.sun.jdmk.comm;resolution:=optional,sun.io;resolution:=optional
 Tool: Bnd-2.1.0.20130426-122213
