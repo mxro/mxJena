@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1437982113187
+Bnd-LastModified: 1437982193230
 Build-Jdk: 1.7.0_79
 Built-By: adminuser
 Bundle-ManifestVersion: 2
@@ -10,11 +10,11 @@ Created-By: Apache Maven Bundle Plugin
 Export-Package: de.mxro.jena;version="0.0.2.SNAPSHOT";uses:="com.hp.hpl.
  jena.ontology,com.hp.hpl.jena.rdf.model,de.mxro.filesystem"
 Import-Package: de.mxro.filesystem;version="[0.0,1)",com.hp.hpl.jena.ont
- ology,com.hp.hpl.jena.rdf.model,com.sun.msv.verifier.regexp;resolution:
- =optional,javax.mail.internet;resolution:=optional,sun.io;resolution:=o
- ptional,com.ibm.icu.lang;resolution:=optional,com.hp.hpl.jena.util;reso
- lution:=optional,com.sun.org.apache.xml.internal.serialize;resolution:=
- optional,com.hp.hpl.jena.iri;resolution:=optional,com.ibm.icu.text;reso
- lution:=optional,org.slf4j;resolution:=optional;version="[1.5,2)",javax
- .jms;resolution:=optional,com.sun.jdmk.comm;resolution:=optional
+ ology,com.hp.hpl.jena.rdf.model,com.hp.hpl.jena.util;resolution:=option
+ al,sun.io;resolution:=optional,com.ibm.icu.lang;resolution:=optional,co
+ m.hp.hpl.jena.iri;resolution:=optional,javax.mail.internet;resolution:=
+ optional,javax.jms;resolution:=optional,com.sun.jdmk.comm;resolution:=o
+ ptional,org.slf4j;resolution:=optional;version="[1.5,2)",com.sun.msv.ve
+ rifier.regexp;resolution:=optional,com.sun.org.apache.xml.internal.seri
+ alize;resolution:=optional,com.ibm.icu.text;resolution:=optional
 Tool: Bnd-2.1.0.20130426-122213
